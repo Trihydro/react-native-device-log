@@ -27,7 +27,8 @@ export default class StringifyDataWriter {
         return rows;
     }
 
-    async insertRows(logRows = [], allRows) {
+    async insertRows(logRows, allRows) {
+        logRows = logRows || [];
         if (this._readOnly) {
             return logRows;
         }
