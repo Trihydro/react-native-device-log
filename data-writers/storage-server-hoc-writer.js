@@ -45,7 +45,8 @@ export default class StorageServerHocWriter {
         return await this.writer.getRows();
     }
 
-    async insertRows(logRows = [], allRows) {
+    async insertRows(logRows, allRows) {
+        logRows = logRows || [];
         if (this.readOnly) {
             return logRows;
         }
