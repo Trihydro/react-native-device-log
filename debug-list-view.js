@@ -19,7 +19,6 @@ const DEFAULT_SELECT_COLOR = "#292929";
 const DEFAULT_SEPARATOR_COLOR = "rgb(252, 217, 28)";
 const DEFAULT_BACKGROUND_COLOR = "#181818";
 const DEFAULT_TEXT_COLOR = "#D6D6D6";
-const LISTVIEW_REF = "listview";
 
 export default class Debug extends React.Component {
 
