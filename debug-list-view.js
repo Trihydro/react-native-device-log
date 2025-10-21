@@ -31,7 +31,8 @@ export default class Debug extends React.Component {
             dataSource: [],
             rows: [],
         };
-        this.styleSheet = getStyleSheet(props)
+        this.styleSheet = getStyleSheet(props);
+        this.listViewRef = React.createRef();
     }
 
     prepareRows(rows) {
@@ -225,8 +226,8 @@ export default class Debug extends React.Component {
     }
 
     onCenterColumnPressed() {
-        if (this.refs[LISTVIEW_REF]) {
-            this.refs[LISTVIEW_REF].scrollTo({ x: 0, y: 0, animated: true });
+        if (this.listViewRef.current) {
+            this.listViewRef.current.scrollTo({ x: 0, y: 0, animated: true });
         }
     }
 
@@ -268,7 +269,7 @@ export default class Debug extends React.Component {
                             />
                         )}
                         enableEmptySections={true}
-                        ref={LISTVIEW_REF}
+                        ref={this.listViewRef}
                         data={this.state.dataSource}
                         renderItem={this._renderRow.bind(this)}
                         keyExtractor={this._getRowKey.bind(this)}
