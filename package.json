@@ -19,7 +19,7 @@
   "author": "Olof Dahlbom",
   "license": "MIT",
   "dependencies": {
-    "@react-native-community/netinfo": "^5.3.3",
+    "@react-native-community/netinfo": "^11.4.1",
     "debounce": "^1.0.2",
     "json-stringify-safe": "^5.0.1",
     "moment": "^2.18.1",
